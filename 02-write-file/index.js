@@ -19,8 +19,7 @@ myProcess.on('line', (text) => {
   }
 });
 myProcess.on('close', () => {
-  myProcess.setPrompt('\u001b[32m' + 'Buy! Have a good day!' + '\u001b[0m');
-  myProcess.prompt();
+  myProcess.output.write('\u001b[32m' + 'Buy! Have a good day' + '\u001b[0m\n');
 });
 myProcess.on('error', (error) => {
   console.error('\u001b[31m' + error + '\u001b[0m');
